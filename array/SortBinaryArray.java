@@ -9,27 +9,38 @@
 
 import java.util.Arrays;
 public class SortBinaryArray{
-    public static void sort(int[] A){
-        int k = 0;
-        for(int i:A){
-            if(i==0){
-                k++;
+    // Function to sort a binary array in linear time
+    public static void sort(int[] A)
+    {
+        // count number of 0's
+        int zeros = 0;
+        for (int value: A)
+        {
+            if (value == 0) {
+                zeros++;
             }
         }
-        int index = 0;
-        while(k!=0){
-            A[index] = 0;
-            index++;
-            k--;
+ 
+        // put 0's at the beginning
+        int k = 0;
+        while (zeros-- != 0) {
+            A[k++] = 0;
         }
-        while(index<A.length){
-            A[index] = 1;
+ 
+        // fill all remaining elements by 1
+        while (k < A.length) {
+            A[k++] = 1;
         }
     }
-    public static void main(String[] args){
-        int[] A = {0,0,1,0,1,1,0,1,0,0};
+ 
+    public static void main (String[] args)
+    {
+        int[] A = { 0, 0, 1, 0, 1, 1, 0, 1, 0, 0 };
+ 
         sort(A);
-        //since arrays are passed as a reference 
+ 
+        // print the rearranged array
         System.out.println(Arrays.toString(A));
+    }
     }
 }
