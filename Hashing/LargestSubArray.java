@@ -7,7 +7,7 @@
         and check if the length of the substring is greater or smaller than the previous substrings 
         we are taking sum as the key
  */
-//time complexity :- O(n^2)
+//time complexity :- O(n)
 
 import java.util.Map;
 import java.util.HashMap;
