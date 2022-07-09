@@ -27,5 +27,5 @@
 
 /**
     Time complexity :- O(n) since there are 2 for loops working here with n numbers so n+n = 2n and if statement would be running for n times inside the loop
-    space complexity :- O(1) since the array is of fixed size and the number of inputs will be fixed
+    space complexity :- O(1) since the array is of fixed size and the number of inputs will be fixed 
  */
