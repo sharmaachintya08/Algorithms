@@ -1,7 +1,6 @@
 /**
     this is a boyer moore voting program for finding the majority element
  */
-
 class MooreVoting{
     public static void mooreVoting(int[] array){
         int count = 1;
