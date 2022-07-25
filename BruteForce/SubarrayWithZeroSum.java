@@ -1,4 +1,3 @@
-package algorithms.BruteForce;
 //in this algorithm we have to find if the sum 0 exists in the given subarray
 //we will use the bruteforce for this
 //time complexity of o(n^2)
