@@ -8,16 +8,9 @@ public class QuadrupletSum {
         if (target == 0 && count == 4) {
             return true;
         }
- 
-        // return false if the sum is not possible with the current configuration
         if (count > 4 || n == 0) {
             return false;
         }
- 
-        // Recur with
-        // 1. Including the current element
-        // 2. Excluding the current element
- 
         return hasQuadruplet(nums, n - 1, target - nums[n - 1], count + 1) ||
                         hasQuadruplet(nums, n - 1, target, count);
     }
