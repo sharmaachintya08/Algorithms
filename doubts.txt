@@ -2,3 +2,4 @@ PROBLEMS
 
 1. LIS by recursion
 2. Decode an array constructed from another array
+3. Find the longest continuous sequence length with the same sum in given binary arrays by Hashing
