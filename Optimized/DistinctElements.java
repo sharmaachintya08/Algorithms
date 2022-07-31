@@ -9,17 +9,18 @@ import java.util.Set;
 import java.util.HashSet;
 
 public class DistinctElements {
-    public static void distinctElements(List<Integer> elements,int k){
-        for(int i=0;i <= elements.size() - k;i++){
+    public static void distinctElements(List<Integer> elements, int k) {
+        for (int i = 0; i <= elements.size() - k; i++) {
             Set<Integer> distinct = new HashSet<>();
-            distinct.addAll(elements.subList(i,i+k));
-            System.out.printf("the distinct elements from subarray :- (%d %d) is %d \n",i,i+k-1,distinct.size());
+            distinct.addAll(elements.subList(i, i + k));
+            System.out.printf("the distinct elements from subarray :- (%d %d) is %d \n", i, i + k - 1, distinct.size());
         }
     }
-    public static void main(String[] args){
-        List<Integer> elements = Arrays.asList(2,1,2,3,2,1,4,5);
+
+    public static void main(String[] args) {
+        List<Integer> elements = Arrays.asList(2, 1, 2, 3, 2, 1, 4, 5);
         int k = 5;
-        distinctElements(elements,k);
+        distinctElements(elements, k);
     }
 }
 /*
