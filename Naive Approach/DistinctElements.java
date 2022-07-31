@@ -26,3 +26,7 @@ class DistinctElements {
         distinctElements(A, k);
     }
 }
+/*
+ * time complexity :- O(n*K^2);
+ * space complexity :- O(1);
+ */
