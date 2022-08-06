@@ -10,22 +10,23 @@ import java.util.stream.IntStream;
 import java.util.stream.Collectors;
 
 public class LonConcequetiveSubsequence {
-    public static int findSubsequence(int[] A){
+    public static int findSubsequence(int[] A) {
         Set<Integer> set = IntStream.of(A).boxed().collect(Collectors.toSet());
         int maxLen = 0;
-        for(int e:A){
-            if(!set.contains(e-1)){
+        for (int e : A) {
+            if (!set.contains(e - 1)) {
                 int len = 1;
-                while(set.contains(e+len)){
-                    len ++;
+                while (set.contains(e + len)) {
+                    len++;
                 }
-                maxLen = Math.max(len,maxLen);
+                maxLen = Math.max(len, maxLen);
             }
         }
         return maxLen;
     }
-    public static void main(String[] args){
-        int[] A = {2,0,6,1,5,3,7};
+
+    public static void main(String[] args) {
+        int[] A = { 2, 0, 6, 1, 5, 3, 7 };
         System.out.println(findSubsequence(A));
     }
 }
