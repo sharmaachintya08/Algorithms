@@ -12,8 +12,8 @@ public class MinMoves {
             int no_of_zeroes = 0;
             for (int i = 0; i < A.length; i++) {
                 if (A[i] % 2 == 1) {
-                    --A[i];
-                    ++min_moves;
+                    --A[i];//breakpoint
+                    ++min_moves;//breakpoint
                 }
                 if (A[i] == 0) {
                     no_of_zeroes++;
@@ -27,10 +27,10 @@ public class MinMoves {
             }
             min_moves++;
         }
-        return min_moves;
+        return min_moves;//breakpoint
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {//breakpoint
         int[] A = { 8, 9, 8 };
         System.out.println(findMoves(A));
     }
