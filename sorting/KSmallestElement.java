@@ -26,3 +26,6 @@ public class KSmallestElement {
         }
     }
 }
+/*
+ * time complexity :- O(nlogn);
+ */
