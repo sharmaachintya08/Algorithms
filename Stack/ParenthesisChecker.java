@@ -1,6 +1,6 @@
 //Parenthesis matching problem
 
-package Algorithms.Stack;
+
 
 import java.util.Stack;
 
