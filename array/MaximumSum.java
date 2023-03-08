@@ -1,6 +1,5 @@
 //Maximum Sum Subarray by kadens algorithm
 
-package Algorithms.Arrays;
 
 public class MaximumSum {
     static int findMax(int arr[]){
