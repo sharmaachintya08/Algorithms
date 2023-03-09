@@ -1,5 +1,9 @@
 package Tree;
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Queue;
 import java.util.Scanner;
 
 
@@ -12,6 +16,64 @@ class Node{
 }
 public class BinaryTree {
     private static Scanner sc;
+    private static Queue<Node> queue;
+
+    static void printRightViewUtil(Node root , ArrayList list, int level){
+        if(root == null) return;
+        if(list.get(level) == null){
+            list.set(level,root);
+        }
+        printRightViewUtil(root.right,list,level+1);
+        printRightViewUtil(root.left,list,level+1);
+    }
+    static void printRightView(Node root){
+        ArrayList<Node> list = new ArrayList<>();
+        printRightViewUtil(root,list,0);
+        for(Node curr : list){
+            System.out.print(curr.data+"\t");
+        }
+    }
+    static void printLeftViewUtil(Node root , ArrayList list, int level){
+        if(root == null) return;
+        if(list.get(level) == null){
+            list.set(level,root);
+        }
+        printLeftViewUtil(root.left,list,level+1);
+        printLeftViewUtil(root.right,list,level+1);
+    }
+    static void printLeftView(Node root){
+        ArrayList<Node> list = new ArrayList<>();
+        printLeftViewUtil(root,list,0);
+        for(Node curr : list){
+            System.out.print(curr.data+"\t");
+        }
+    }
+    static void traverseAllLevel(Node root){
+        if(root == null) return;
+        queue.add(root);
+        while(!queue.isEmpty()){
+            Node curr = queue.poll();
+            System.out.println(curr.data);
+            if(curr.left != null){
+                queue.add(curr.left);
+            }
+            if(curr.right != null){
+                queue.add(curr.right);
+            }
+        }
+    }
+    //tc :- O(N^2) sc :- O(h)
+    static void printCurrentLevel(Node root,int level){
+        if(root == null){
+            return ;
+        }
+        if(level == 1){
+            System.out.print("data at current level :- "+root.data+"\t");
+        }else if(level > 1){
+            printCurrentLevel(root.left, level - 1 );
+            printCurrentLevel(root.right, level - 1 );
+        }
+    }
     static int findMinNode(Node root){
         if(root == null){
             return Integer.MIN_VALUE;
@@ -88,6 +150,7 @@ public class BinaryTree {
     }
     public static void main(String[] args){
         sc = new Scanner(System.in);
+        queue = new ArrayDeque<>();
         Node root = createTree();
         printTree(root);
         System.out.println();
@@ -101,5 +164,7 @@ public class BinaryTree {
         System.out.println("total size of the tree "+size(root));
         System.out.println("maximum element in the tree "+findMaxNode(root));
         System.out.println("minimum element in the tree "+findMinNode(root));
+        System.out.println();
+        printCurrentLevel(root, 4);
     }
 }
