@@ -1,6 +1,5 @@
 //Trapping RainWater problem 
 
-package Algorithms.Arrays;
 
 public class TrappingRainWater {
     static int findTrappedWater(int arr[]){

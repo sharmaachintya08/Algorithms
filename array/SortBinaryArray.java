@@ -42,5 +42,4 @@ public class SortBinaryArray{
         // print the rearranged array
         System.out.println(Arrays.toString(A));
     }
-    }
 }

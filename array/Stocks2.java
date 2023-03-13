@@ -1,7 +1,6 @@
 //Best time to buy and sell stocks
 //can buy stocks as many times as we want
 
-package Algorithms.Arrays;
 
 public class Stocks2 {
     static int findProfit(int arr[]){

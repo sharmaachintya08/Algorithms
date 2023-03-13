@@ -3,7 +3,6 @@
 
  */
 
-package array;
 
 public class MinMoves {
     public static int findMoves(int[] A) {
