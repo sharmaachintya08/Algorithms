@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.Queue;
 import java.util.Scanner;
 
+import javax.swing.text.DefaultStyledDocument.ElementSpec;
+
 
 class Node{
     Node left , right;
@@ -14,12 +16,30 @@ class Node{
         this.data = data;
     }
 }
+
+//Every parent has atmost 2 children
 public class BinaryTree {
     private  Scanner sc;
     private  Queue<Node> queue;
     private  Node prev = null;
     private  Node head = null;
+    private int level = 0;
+    HashMap<Integer , ArrayList<Integer>> map = new HashMap<>();
 
+    //Vertical Order traversal of Binary Tree
+    //can solve this by level order traversal and by hashmap
+    //by traversing the hashmap afterwards
+    //problem
+    public void VerticalTrav(Node root , int level ){
+        if(root == null) return;
+        if(map.containsKey(level)){
+            
+        }else{
+            map.put(level,new ArrayList<>(root.data));
+        }
+        VerticalTrav(root.right , level + 1);
+        VerticalTrav(root.left , level - 1);
+    }
     //Lowest Common Ancestor in a Binary Tree
     public Node lca(Node root , int n1 , int n2){
         if(root == null) return null;
