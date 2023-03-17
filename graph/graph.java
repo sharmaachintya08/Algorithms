@@ -23,7 +23,24 @@ class graph {
 	// Function to add an edge into the graph
 	void addEdge(int v, int w) { adj[v].add(w); }
 
-    
+    public void DFSUtil(int v , boolean visited[]){
+        visited[v] = true;
+        System.out.print(v + " ");
+        Iterator<Integer> i = adj[v].listIterator();
+        while(i.hasNext()){
+            int n = i.next();
+            if(!visited[n]){
+                DFSUtil(n,visited);
+            }
+        }
+    }
+    //DFS traversal
+    //focuses on traversing all the nodes in deep 
+    public void DFS(int v){
+        boolean visited[] = new boolean[V];
+        DFSUtil(v,visited);
+    }
+
 	// prints BFS traversal from a given source s
     //traverse according to the height or level of the tree
 	void BFS(int s)
