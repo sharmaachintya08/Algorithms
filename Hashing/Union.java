@@ -1,7 +1,5 @@
 //Union of 2 arrays
 
-package Algorithms.Hashing;
-
 import java.util.HashSet;
 import java.util.Set;
 

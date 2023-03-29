@@ -1,8 +1,6 @@
 //flatten a multilevel linked list using linkedlist
 //problem
 
-package LinkedList;
-
 class Node{
     int data;
     Node next;

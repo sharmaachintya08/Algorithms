@@ -1,7 +1,5 @@
 //Intersection of 2 arrays
 
-package Algorithms.Hashing;
-
 import java.util.HashSet;
 
 public class Intersection {

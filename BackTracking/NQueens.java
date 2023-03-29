@@ -1,7 +1,5 @@
 //N queens algorithm
 
-package Algorithms.BackTracking;
-
 public class NQueens {
     final int N = 4;
 

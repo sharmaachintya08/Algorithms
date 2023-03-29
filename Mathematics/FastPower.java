@@ -1,4 +1,3 @@
-package Algorithms.MathematicsAndNumberTheory;
 
 public class FastPower {
     public static void main(String[] args){

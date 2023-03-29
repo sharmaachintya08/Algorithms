@@ -1,7 +1,5 @@
 //count distinct elements
 
-package Algorithms.Hashing;
-
 import java.util.HashSet;
 
 public class DistinctElements {

@@ -1,7 +1,5 @@
 //count the distinct elements in every window of size k
 
-package Algorithms.Hashing;
-
 import java.util.HashMap;
 
 

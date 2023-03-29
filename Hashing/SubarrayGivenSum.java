@@ -1,7 +1,5 @@
 //subArray with given sum k
 
-package Algorithms.Hashing;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;

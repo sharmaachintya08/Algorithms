@@ -1,7 +1,5 @@
 //Find the factorial of the number
 
-package Algorithms.MathematicsAndNumberTheory;
-
 public class Factorial {
     public static void main(String[] args){
         int fact = 5;
