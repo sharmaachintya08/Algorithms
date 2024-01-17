@@ -1,4 +1,4 @@
-//Binary to Decimal 
+//Decimal to Binary
 //cpp logic
 
 #include <iostream.h>
