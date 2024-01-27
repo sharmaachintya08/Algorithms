@@ -17,10 +17,8 @@ public:
     }
     occurrences.push_back(count);
 
-    // Sorting the occurrences array
     std::sort(occurrences.begin(), occurrences.end());
 
-    // Checking for uniqueness of occurrences
     for (int i = 1; i < occurrences.size(); ++i) {
         if (occurrences[i] == occurrences[i - 1]) {
             return false;
